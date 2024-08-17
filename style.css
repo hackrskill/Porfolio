@@ -176,8 +176,8 @@ section {
   display: flex;
   height: 400px;
   width: 400px;
-  box-shadow:  0 8px 10px #0606068d;
-  border-radius: 50%;
+  
+  border-radius: 100px;
   
   margin: auto 0;
 }
