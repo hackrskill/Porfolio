@@ -52,10 +52,10 @@ a {
 }
 
 a:hover {
-  color: grey;
+  color: rgb(231, 227, 227);
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-color: rgb(181, 181, 181);
+  text-decoration-color: rgb(234, 230, 230);
 }
 
 .logo {
