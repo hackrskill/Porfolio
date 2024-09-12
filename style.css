@@ -9,10 +9,15 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  background-image: url('u1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 html {
-  scroll-behavior:inherit;
+  scroll-behavior: smooth;
 }
 
 p {
@@ -37,6 +42,7 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  transition: background-color 0.5s ease-in-out;
 }
 
 .nav-links {
@@ -97,7 +103,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgb(44, 52, 39);
+  background-color: rgb(210, 163, 158);
   border-radius: 8px;
   box-shadow: 0 4px 10px #0606068d;
   width: fit-content;
@@ -140,14 +146,6 @@ a:hover {
   transform: none;
 }
 
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 /* SECTIONS */
 
 section {
@@ -167,7 +165,6 @@ section {
 #profile {
   display: flex;
   justify-content: center;
-  
   gap: 5rem;
   height: 80vh;
 }
@@ -176,9 +173,7 @@ section {
   display: flex;
   height: 400px;
   width: 400px;
-  
   border-radius: 100px;
-  
   margin: auto 0;
 }
 
@@ -203,6 +198,19 @@ section {
 .title {
   font-size: 3rem;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 #socials-container {
@@ -217,6 +225,11 @@ section {
 .icon {
   cursor: pointer;
   height: 2rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: rotate(360deg) scale(1.1);
 }
 
 /* BUTTONS */
@@ -253,6 +266,8 @@ section {
 
 .btn-color-1:hover {
   background: rgb(0, 0, 0);
+  transform: scale(1.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .btn-color-2 {
@@ -376,6 +391,11 @@ article .icon {
   border-radius: 2rem;
   width: 90%;
   height: 90%;
+  transition: transform 0.3s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
 }
 
 .project-title {
